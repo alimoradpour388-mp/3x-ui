@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk add --no-cache curl bash nginx
 
-RUN curl -Ls https://ghproxy.com/https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh | bash
+RUN curl -Ls https://raw.gitmirror.com/mhsanaei/3x-ui/master/install.sh | bash
 
 COPY nginx.conf.template /etc/nginx/http.d/default.conf
 COPY start.sh /start.sh
